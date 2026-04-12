@@ -1064,6 +1064,7 @@
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
       .process-steps::before { display: none; }
+      .results-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -1083,6 +1084,11 @@
       .hero-stats { gap: 24px; flex-wrap: wrap; }
       .work-header { flex-direction: column; align-items: flex-start; gap: 20px; }
       footer .footer-inner { flex-direction: column; align-items: flex-start; }
+      .results-grid { grid-template-columns: 1fr; }
+      .result-card { padding: 32px 24px; }
+      .result-num { font-size: 2.5rem; }
+      .ai-card-inner { grid-template-columns: 1fr; gap: 20px; }
+      .process-steps { grid-template-columns: 1fr; }
     }
 
     /* ===== SCROLL ANIMATIONS ===== */
