@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabrizia Cannalonga — Marketing Executive & Consultant</title>
+  <meta name="description" content="Fabrizia Cannalonga — Senior marketing executive and consultant specializing in brand strategy, experiential marketing, and revenue growth. 15+ years across client, agency, and supplier sides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: #0C1A3A;
+      background-color: #FFFFFF;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== TOKENS ===== */
+    :root {
+      --white: #FFFFFF;
+      --off-white: #F2F5FA;
+      --light-border: #DDE3EF;
+      --gray: #8A9BBF;
+      --navy: #0C1A3A;
+      --navy-soft: #2E4070;
+      --navy-muted: #6272A4;
+      --accent: #1B3A6B;
+      --accent-light: #EBF0FA;
+      --nav-height: 76px;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(3rem, 6vw, 5.5rem); }
+    h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); }
+    h3 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+    h4 { font-size: 1.1rem; font-weight: 500; font-family: 'Inter', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+    p { font-size: 1rem; color: var(--navy-soft); line-height: 1.8; }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
+    .section-label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gray);
+      margin: 2rem 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-dark:hover {
+      background: var(--accent);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--navy);
+    }
+    .btn-outline:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn svg { width: 16px; height: 16px; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      background: rgba(250, 249, 246, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--light-border);
+      transition: all 0.3s ease;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--navy);
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .nav-cta:hover { background: var(--accent); }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--navy);
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: var(--nav-height);
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 40px;
+      max-width: 640px;
+      margin-left: auto;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 2rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero-eyebrow p {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0;
+    }
+    .hero-content h1 {
+      margin-bottom: 1.5rem;
+      color: var(--navy);
+    }
+    .hero-content h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-content > p {
+      font-size: 1.05rem;
+      max-width: 420px;
+      margin-bottom: 2.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--light-border);
+    }
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-muted);
+      margin-top: 6px;
+    }
+    .hero-visual {
+      background: var(--off-white);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--gray);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .hero-image-placeholder svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0.4;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 40px;
+      left: -20px;
+      background: var(--white);
+      padding: 20px 28px;
+      border-left: 3px solid var(--accent);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+    .hero-badge p {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .hero-badge h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--navy);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* ===== MARQUEE ===== */
+    .marquee-section {
+      border-top: 1px solid var(--light-border);
+      border-bottom: 1px solid var(--light-border);
+      overflow: hidden;
+      padding: 18px 0;
+      background: var(--white);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 60px;
+      animation: marquee 28s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy-muted);
+      flex-shrink: 0;
+    }
+    .marquee-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      padding: 120px 0;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-grid--text-only {
+      grid-template-columns: 1fr;
+      max-width: 780px;
+    }
+    .about-image {
+      aspect-ratio: 3/4;
+      background: var(--off-white);
+      position: relative;
+      overflow: hidden;
+      max-height: 580px;
+    }
+    .about-image-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--gray);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .about-image-inner svg { width: 40px; height: 40px; opacity: 0.35; }
+    .about-accent-box {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 120px;
+      height: 120px;
+      background: var(--accent-light);
+      border-top: 3px solid var(--accent);
+      border-left: 3px solid var(--accent);
+    }
+    .about-text { padding: 20px 0; }
+    .about-text h2 { margin-bottom: 1.5rem; }
+    .about-text p { margin-bottom: 1.2rem; }
+    .about-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 2.5rem;
+    }
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .pillar-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .pillar-icon svg { width: 16px; height: 16px; color: var(--accent); }
+    .pillar-text strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .pillar-text p { font-size: 0.88rem; margin: 0; }
+
+    /* ===== SERVICES ===== */
+    #services {
+      padding: 120px 0;
+      background: var(--off-white);
+    }
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 70px;
+    }
+    .services-header h2 { margin: 0; }
+    .services-header p { font-size: 1rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      background: var(--white);
+      padding: 44px 36px;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .service-card:hover {
+      background: var(--navy);
+    }
+    .service-card:hover .service-title,
+    .service-card:hover .service-number,
+    .service-card:hover .service-list li {
+      color: var(--white);
+    }
+    .service-card:hover .service-desc { color: var(--gray); }
+    .service-card:hover .service-icon { background: rgba(255,255,255,0.08); }
+    .service-card:hover .service-icon svg { color: var(--accent); }
+    .service-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--light-border);
+      line-height: 1;
+      margin-bottom: 24px;
+      transition: color 0.3s;
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: background 0.3s;
+    }
+    .service-icon svg { width: 22px; height: 22px; color: var(--accent); transition: color 0.3s; }
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 16px;
+      transition: color 0.3s;
+      line-height: 1.2;
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--navy-soft);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      transition: color 0.3s;
+    }
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .service-list li {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--navy-muted);
+      padding-left: 14px;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .service-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+    }
+
+    /* ===== AI CARD ===== */
+    .ai-card {
+      margin-top: 2px;
+    }
+    .ai-card-inner {
+      background: var(--white);
+      padding: 48px 44px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: start;
+      position: relative;
+      transition: background 0.3s ease;
+    }
+    .ai-card-inner:hover {
+      background: var(--navy);
+    }
+    .ai-card-inner:hover .ai-title,
+    .ai-card-inner:hover .ai-desc,
+    .ai-card-inner:hover .ai-list li {
+      color: var(--white);
+    }
+    .ai-card-inner:hover .ai-label {
+      color: rgba(255,255,255,0.6);
+    }
+    .ai-card-inner:hover .service-icon {
+      background: rgba(255,255,255,0.1);
+    }
+    .ai-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+    }
+    .ai-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .ai-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .ai-desc {
+      font-size: 0.92rem;
+      color: var(--navy-soft);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+    .ai-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ai-list li {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--navy-soft);
+      padding-left: 14px;
+      position: relative;
+    }
+    .ai-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+    }
+    @media (max-width: 768px) {
+      .ai-card-inner { grid-template-columns: 1fr; gap: 20px; padding: 36px 24px; }
+    }
+
+    /* ===== PROCESS ===== */
+    #process {
+      padding: 120px 0;
+    }
+    .process-header { margin-bottom: 70px; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: var(--light-border);
+      z-index: 0;
+    }
+    .process-step {
+      position: relative;
+      z-index: 1;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .step-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1.5px solid var(--light-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--accent);
+      transition: all 0.3s;
+    }
+    .process-step:hover .step-dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--white);
+    }
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--navy-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== WORK ===== */
+    #work {
+      padding: 120px 0;
+      background: var(--off-white);
+    }
+    .work-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .work-card {
+      position: relative;
+      aspect-ratio: 16/10;
+      background: var(--navy);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .work-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .work-card:hover img { transform: scale(1.04); }
+    .work-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,26,58,0.95) 0%, rgba(12,26,58,0.3) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      transition: background 0.3s ease;
+    }
+    .work-card:hover .work-overlay {
+      background: linear-gradient(to top, rgba(12,26,58,0.98) 0%, rgba(12,26,58,0.6) 60%, rgba(12,26,58,0.2) 100%);
+    }
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      backdrop-filter: blur(4px);
+    }
+    .work-card:hover .play-btn {
+      background: rgba(255,255,255,0.25);
+      border-color: white;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .play-btn svg { width: 18px; height: 18px; fill: white; margin-left: 3px; }
+    .work-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 6px;
+    }
+    .work-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .work-desc {
+      font-size: 0.82rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      position: relative;
+      width: 90vw;
+      max-width: 1000px;
+      aspect-ratio: 16/9;
+    }
+    .lightbox-inner iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .lightbox-close:hover { opacity: 1; }
+
+    /* ===== RESULTS ===== */
+    #work { padding: 120px 0; background: var(--off-white); }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .result-card {
+      background: var(--white);
+      padding: 48px 40px;
+      border: 1px solid var(--light-border);
+      transition: border-color 0.3s;
+    }
+    .result-card:hover { border-color: var(--accent); }
+    .result-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .result-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .result-desc {
+      font-size: 0.9rem;
+      color: var(--navy-soft);
+      line-height: 1.7;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials {
+      padding: 120px 0;
+    }
+    .testimonials-header { margin-bottom: 60px; }
+    .testimonials-carousel {
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .testimonial-slide {
+      min-width: 100%;
+    }
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .carousel-btn {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid var(--navy);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+    .carousel-btn:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .carousel-dots {
+      display: flex;
+      gap: 8px;
+    }
+    .carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--light-border);
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+    }
+    .carousel-dot.active {
+      background: var(--navy);
+    }
+    .testimonial-card {
+      padding: 40px 36px;
+      background: var(--white);
+      border: 1px solid var(--light-border);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 16px;
+      left: 28px;
+      line-height: 1;
+    }
+    .testimonial-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--light-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .author-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .author-role {
+      font-size: 0.75rem;
+      color: var(--navy-muted);
+    }
+
+    /* ===== CTA ===== */
+    #contact {
+      padding: 140px 0;
+      background: var(--navy);
+      text-align: center;
+    }
+    #contact .section-label { color: var(--accent); }
+    #contact h2 {
+      color: var(--white);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+    }
+    #contact > .container > p {
+      color: var(--gray);
+      max-width: 480px;
+      margin: 0 auto 3rem;
+    }
+    .contact-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn-light {
+      background: var(--white);
+      color: var(--navy);
+    }
+    .btn-light:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--gray);
+      border: 1.5px solid rgba(255,255,255,0.2);
+    }
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .contact-email {
+      display: block;
+      margin-top: 48px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-style: italic;
+    }
+    .contact-email:hover { color: var(--accent); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #070E1F;
+      padding: 48px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy {
+      font-size: 0.72rem;
+      color: #555550;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--accent); }
+    .mobile-nav-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .process-steps::before { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      #hero { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-content { padding: 60px 0 80px; max-width: 100%; margin: 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-image { max-height: 380px; }
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .work-grid { grid-template-columns: 1fr; }
+      .work-card:first-child { grid-row: span 1; aspect-ratio: 4/3; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .work-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      footer .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">Fabrizia<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Results</a></li>
+          <li><a href="#testimonials">Praise</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMenu()">×</button>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#work" onclick="toggleMenu()">Work</a>
+    <a href="#testimonials" onclick="toggleMenu()">Praise</a>
+    <a href="#contact" onclick="toggleMenu()">Let's Talk</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-content container" style="padding-left: max(40px, calc((100vw - 1160px)/2 + 40px));">
+      <div class="hero-eyebrow">
+        <p>Brand, Marketing &amp; Experiential Leader</p>
+      </div>
+      <h1>
+        Strategy that<br/>
+        <em>moves</em> people <br/>
+        literally.
+      </h1>
+      <p>I help brands connect with their audiences in every dimension, from the big idea to the live experience. Brand strategy, marketing, and experiential that doesn't just look good, but leaves a lasting impression.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-dark">
+          Explore Services
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#work" class="btn btn-outline">Results</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">15+</div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">$110M+</div>
+          <div class="hero-stat-label">Budgets Managed</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">550%</div>
+          <div class="hero-stat-label">DTC Revenue Growth</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://lh3.googleusercontent.com/d/1j4G-MpMHyKjVPmZPSLP_jgQ3CFzfogks" alt="Fabrizia Cannalonga" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
+      <div class="hero-badge">
+        <p>Currently available</p>
+        <h4>for new projects</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marqueeTrack">
+      <span class="marquee-item">Brand Strategy <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Experiential Marketing <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Trade &amp; Auto Shows <span class="marquee-dot"></span></span>
+      <span class="marquee-item">PR &amp; Media Events <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Experiential Road Tours <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Dealer Meetings <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Content Strategy <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Fabrication &amp; Production <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Campaign Development <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Brand Identity <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Special Events <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Market Research <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Enterprise AI Workflows <span class="marquee-dot"></span></span>
+      <span class="marquee-item">AI Automations &amp; Workflows <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Audience Segmentation <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Influencer &amp; Affiliate Programs <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Brand &amp; Product Launches <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Demand Generation <span class="marquee-dot"></span></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item">Brand Strategy <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Experiential Marketing <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Trade &amp; Auto Shows <span class="marquee-dot"></span></span>
+      <span class="marquee-item">PR &amp; Media Events <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Experiential Road Tours <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Dealer Meetings <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Content Strategy <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Fabrication &amp; Production <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Campaign Development <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Brand Identity <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Special Events <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Enterprise AI Workflows <span class="marquee-dot"></span></span>
+      <span class="marquee-item">AI Automations &amp; Workflows <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Audience Segmentation <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Influencer &amp; Affiliate Programs <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Brand &amp; Product Launches <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Demand Generation <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Market Research <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Enterprise AI Workflows <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid about-grid--text-only">
+        <div class="about-text fade-up">
+          <span class="section-label">About Me</span>
+          <h2>Strategy meets soul.</h2>
+          <div class="divider"></div>
+          <p>I'm Fabrizia Cannalonga, a global marketing executive with 15+ years leading brand strategy, go-to-market execution, and large-scale experiential programs across automotive, technology, and consumer sectors. I've worked at every level: from VP at Innocean managing a $110M+ portfolio for Hyundai and Genesis Motors, to building boutique brands from scratch.</p>
+          <p>I launched Genesis Motors in the U.S., full brand positioning, experiential debut, and PGA Tour sponsorship, in under 40 days. I produced Toyota's highest-rated National Dealer Meeting, attended by 5,000+ dealers across 300,000 sq ft. I scaled a DTC brand 550% in 12 months on less than 15% marketing spend. I bring that same intensity, creativity, and accountability to every client I partner with.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Fortune 500 Track Record</strong>
+                <p>Hyundai, Genesis, Toyota, Lexus, LA Auto Show, real brands, real results, at scale.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>Strategy + Execution</strong>
+                <p>I don't just build the plan, I've been on the floor making it happen. Both sides of the table.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="pillar-text">
+                <strong>MS, Strategic Brand Communications</strong>
+                <p>University of Illinois at Urbana-Champaign, 4.0 GPA. The academic rigor to match the real-world experience.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header fade-up">
+        <div>
+          <span class="section-label">What I Do</span>
+          <h2>Services designed to move you forward.</h2>
+        </div>
+        <p>From Fortune 500 brand strategy to hands-on experiential production, I bring 15+ years of real-world expertise across automotive, tech, and consumer sectors to help your business grow with purpose.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="service-title">Brand Strategy</div>
+          <p class="service-desc">Build a brand that stands for something real, with a clear identity, consistent positioning, and a story worth telling.</p>
+          <ul class="service-list">
+            <li>Brand positioning &amp; architecture</li>
+            <li>Audience research &amp; personas</li>
+            <li>Brand voice &amp; messaging</li>
+            <li>Competitive landscape analysis</li>
+            <li>Brand &amp; product launches</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="service-title">Marketing Strategy</div>
+          <p class="service-desc">A roadmap built on your goals, audience, and budget, so every campaign has a reason to exist and a way to measure success.</p>
+          <ul class="service-list">
+            <li>Go-to-market strategy</li>
+            <li>Channel planning &amp; mix</li>
+            <li>Campaign ideation &amp; briefs</li>
+            <li>Performance frameworks</li>
+            <li>Demand generation</li>
+            <li>Audience segmentation</li>
+            <li>Influencer &amp; affiliate programs</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div class="service-title">Content Strategy</div>
+          <p class="service-desc">Content that earns attention by being genuinely useful, on-brand, and built around what your audience actually needs.</p>
+          <ul class="service-list">
+            <li>Content pillars &amp; planning</li>
+            <li>Editorial strategy &amp; calendars</li>
+            <li>Tone of voice guidelines</li>
+            <li>Copywriting direction</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <div class="service-title">Market Research</div>
+          <p class="service-desc">Real insight from real data. Understand your market, competitors, and customers before making costly assumptions.</p>
+          <ul class="service-list">
+            <li>Customer interviews &amp; surveys</li>
+            <li>Competitor benchmarking</li>
+            <li>Trend &amp; opportunity mapping</li>
+            <li>Research synthesis &amp; reporting</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="service-title">Experiential Marketing</div>
+          <p class="service-desc">From concept to build to teardown, I plan, produce, and manage brand experiences that people remember long after they've walked away.</p>
+          <ul class="service-list">
+            <li>Trade &amp; auto shows</li>
+            <li>Experiential road tours</li>
+            <li>Brand &amp; product launches</li>
+            <li>Dealer meetings &amp; special events</li>
+            <li>Fabrication oversight &amp; audits</li>
+            <li>PR &amp; media events</li>
+            <li>Large-scale team management</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="service-title">Advisory &amp; Coaching</div>
+          <p class="service-desc">Ongoing strategic support for founders and marketing teams who want a sharp, experienced voice in the room.</p>
+          <ul class="service-list">
+            <li>Fractional CMO support</li>
+            <li>1:1 founder coaching</li>
+            <li>Team workshops &amp; training</li>
+            <li>Quarterly brand audits</li>
+          </ul>
+        </div>
+        </div>
+      <!-- AI Featured Card -->
+      <div class="ai-card fade-up">
+        <div class="ai-card-inner">
+          <div class="ai-badge">Currently Certifying</div>
+          <div class="service-icon" style="margin-bottom: 20px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+          </div>
+          <div class="ai-content">
+            <div class="ai-label">New Capability</div>
+            <div class="ai-title">Enterprise AI Workflows</div>
+            <p class="ai-desc">As AI reshapes how marketing teams operate, I'm bringing certified expertise in enterprise AI workflows to help organizations integrate intelligent automation into their brand and marketing operations, without losing the human edge that makes great brands great.</p>
+            <ul class="ai-list">
+              <li>AI-powered marketing automation strategy</li>
+              <li>Workflow design &amp; tool integration</li>
+              <li>AI content &amp; campaign operations</li>
+              <li>Team training &amp; change management</li>
+              <li>AI readiness audits for marketing teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process">
+    <div class="container">
+      <div class="process-header fade-up">
+        <span class="section-label">How It Works</span>
+        <h2>A process built on listening first.</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step fade-up">
+          <div class="step-dot">01</div>
+          <div class="step-title">Discovery</div>
+          <p class="step-desc">We start with a deep dive, understanding your business, goals, audiences, and what's working (and what isn't).</p>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-dot">02</div>
+          <div class="step-title">Strategy</div>
+          <p class="step-desc">Informed by research and insight, I build a tailored strategy with clear priorities and a path forward.</p>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-dot">03</div>
+          <div class="step-title">Execution</div>
+          <p class="step-desc">From direction to deliverables, I work with you (and your team) to bring the strategy to life with precision.</p>
+        </div>
+        <div class="process-step fade-up">
+          <div class="step-dot">04</div>
+          <div class="step-title">Refinement</div>
+          <p class="step-desc">Brands evolve. I stay close to track performance, gather feedback, and sharpen the approach over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS ===== -->
+  <section id="work">
+    <div class="container">
+      <div class="fade-up" style="margin-bottom:60px;">
+        <span class="section-label">Results</span>
+        <h2>The numbers speak.</h2>
+      </div>
+      <div class="results-grid fade-up">
+
+        <div class="result-card">
+          <div class="result-num">$110M+</div>
+          <div class="result-title">Marketing Budgets Managed</div>
+          <p class="result-desc">Led marketing spend across enterprise clients including Hyundai Motor America and Genesis Motors at the national and global level.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">550%</div>
+          <div class="result-title">Revenue Growth in 12 Months</div>
+          <p class="result-desc">Scaled a DTC consumer brand from $400K to $2.8M in one year on under 15% marketing spend. Built influencer and affiliate programs from scratch.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">#8</div>
+          <div class="result-title">Amazon Category Ranking</div>
+          <p class="result-desc">Took the same DTC brand to a top-10 Amazon category ranking within two years through performance marketing, content, and channel strategy.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">40</div>
+          <div class="result-title">Days to Launch Genesis in the U.S.</div>
+          <p class="result-desc">Delivered full experiential strategy, PGA Tour sponsorship activation, and national brand launch for Genesis Motors — in under 40 days. $700M in Year 1 sales followed.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">80+</div>
+          <div class="result-title">Trade &amp; Auto Shows Annually</div>
+          <p class="result-desc">Directed Hyundai's global exhibit program across 80+ international trade and auto shows per year — brand environments, ambassadors, fabrication, and live brand experience.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">$35M → $110M</div>
+          <div class="result-title">Department Turnaround</div>
+          <p class="result-desc">Turned around a failing marketing department, scaling revenue from $35M to $110M within 4 years — while leading cross-functional teams of 28+ across global markets.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">$16M+</div>
+          <div class="result-title">Contracts Retained During COVID</div>
+          <p class="result-desc">Kept the agency profitable during the pandemic by pivoting the entire portfolio to virtual events — retaining $16M+ in contracts without losing a single client.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">10-Year</div>
+          <div class="result-title">PGA Tour Title Sponsorship</div>
+          <p class="result-desc">Negotiated and executed a 10-year PGA Tour title sponsorship as the global launch platform for Genesis Motors — delivering international brand visibility across events, media, and consumer engagement programs.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-num">$900K+</div>
+          <div class="result-title">Partnership Value Generated</div>
+          <p class="result-desc">Negotiated and activated strategic licensing partnerships with global brands including Michelin and Mattel, expanding co-marketing reach across retail and digital channels.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-header fade-up">
+        <span class="section-label">What Clients Say</span>
+        <h2>Trusted by founders &amp; teams.</h2>
+      </div>
+      <div class="testimonials-carousel">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"By week one I knew we'd added a leader to our company. What stands out most is that she builds trust — from her teams, agency leadership, and most importantly the client. When it comes to live events, the agency has one chance to deliver success. Because of her leadership, that success was never a doubt in my mind."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">G</div>
+                <div>
+                  <div class="author-name">Greg Braun</div>
+                  <div class="author-role">Executive Creative Director, Innocean · Former Global Chief Creative Officer · Best-Selling Author</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Fabrizia is one of those rare individuals that can have the 40,000 ft view, develop a comprehensive strategy and then dive in deep to lead execution. Her collaborative style, leadership skills, and ability to manage multiple work streams make her an invaluable asset to any company."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">J</div>
+                <div>
+                  <div class="author-name">Joe Kurzer</div>
+                  <div class="author-role">Director, FG|PG · Now at Apple</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Fabrizia is the embodiment of professionalism and tenacity. She juggles the management duties of a large and very busy team while always staying focused on the brand's strategic goals and business objectives."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div>
+                  <div class="author-name">Mike Giannone</div>
+                  <div class="author-role">VP Planning Director, Innocean · Now at Meta</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Her approach to DTC and brand marketing was not only innovative but also refreshingly agile. What sets Fabrizia apart is her ability to seamlessly blend creativity with data-driven strategy — a rare skill that consistently drives measurable growth."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div>
+                  <div class="author-name">Mikhail Alfon</div>
+                  <div class="author-role">CEO & Founder, Blue Light Media</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)">&#8592;</button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="goToSlide(0)"></button>
+            <button class="carousel-dot" onclick="goToSlide(1)"></button>
+            <button class="carousel-dot" onclick="goToSlide(2)"></button>
+            <button class="carousel-dot" onclick="goToSlide(3)"></button>
+          </div>
+          <button class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section id="contact">
+    <div class="container">
+      <span class="section-label">Let's Work Together</span>
+      <h2>Ready to build something worth remembering?</h2>
+      <p>Whether you have a clear brief or just a feeling that something needs to change, let's talk. No commitment, no sales pitch.</p>
+      <div class="contact-actions">
+        <a href="mailto:fabriziacanna@gmail.com" class="btn btn-light">
+          Send an Email
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/fabrizia/" target="_blank" class="btn btn-ghost">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#" class="footer-logo">Fabrizia<span>.</span></a>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Results</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="footer-copy">© 2026 Fabrizia Cannalonga.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Stagger children within same parent
+    document.querySelectorAll('.services-grid, .testimonials-grid, .process-steps').forEach(grid => {
+      grid.querySelectorAll('.fade-up').forEach((el, i) => {
+        el.style.transitionDelay = (i * 0.1) + 's';
+      });
+    });
+
+    // Nav shrink on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 60) {
+        nav.style.height = '60px';
+        nav.style.borderBottomColor = '#DDE3EF';
+      } else {
+        nav.style.height = '76px';
+      }
+    });
+  // Lightbox
+  function openLightbox(src) {
+    if (!src) return;
+    document.getElementById('lightboxFrame').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+    document.getElementById('lightboxFrame').src = '';
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({ target: document.getElementById('lightbox') }); });
+
+  // Carousel
+  let currentSlide = 0;
+  const totalSlides = 4;
+
+  function updateCarousel() {
+    const track = document.getElementById('testimonialsTrack');
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  function moveCarousel(dir) {
+    currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+  }
+  </script>
+</body>
+</html>
