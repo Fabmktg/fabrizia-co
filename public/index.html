@@ -814,6 +814,92 @@
       line-height: 1.7;
     }
 
+    /* ===== CASE STUDIES ===== */
+    #case-studies { padding: 120px 0; background: var(--white); }
+    .case-studies-header { margin-bottom: 80px; }
+    .case-studies-header p {
+      font-size: 1.05rem;
+      color: var(--navy-soft);
+      max-width: 560px;
+      margin-top: 16px;
+      line-height: 1.8;
+    }
+    .case-study {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      padding: 64px 0;
+      border-top: 1px solid var(--light-border);
+      align-items: start;
+    }
+    .case-study-meta { position: sticky; top: 100px; }
+    .case-study-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .case-study-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .case-study-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--navy-muted);
+    }
+    .case-study-body p {
+      font-size: 1rem;
+      color: var(--navy-soft);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .case-study-results {
+      margin-top: 36px;
+      padding: 32px 36px;
+      background: var(--off-white);
+      border-left: 3px solid var(--accent);
+    }
+    .case-study-results-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .case-study-results ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .case-study-results li {
+      font-size: 0.9rem;
+      color: var(--navy);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .case-study-results li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 768px) {
+      .case-study { grid-template-columns: 1fr; gap: 32px; }
+      .case-study-meta { position: static; }
+    }
+
     /* ===== TESTIMONIALS ===== */
     #testimonials {
       padding: 120px 0;
@@ -1481,6 +1567,105 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section id="case-studies">
+    <div class="container">
+      <div class="case-studies-header fade-up">
+        <span class="section-label">Selected Work</span>
+        <p>A few examples of brands, moments, and challenges I've had the opportunity to shape.</p>
+      </div>
+
+      <!-- Case Study 1: Genesis Motors -->
+      <div class="case-study fade-up">
+        <div class="case-study-meta">
+          <span class="case-study-tag">Brand Launch</span>
+          <h3 class="case-study-title">Genesis Motors U.S. Launch</h3>
+          <p class="case-study-subtitle">Introducing a new luxury automotive brand to the American market</p>
+        </div>
+        <div class="case-study-body">
+          <p>When Hyundai Motor Company spun off Genesis as a standalone luxury brand, it needed to enter the U.S. market not just as a new nameplate, but as a credible competitor to BMW, Mercedes, and Lexus. I led experiential and brand activation strategy during this critical launch window — building consumer touchpoints that communicated Genesis's design-forward identity and Korean heritage in a way that felt aspirational rather than derivative.</p>
+          <p>The work spanned auto show debuts, test-drive programs, dealer launch events, and VIP media moments. Every touchpoint was designed to shape a first impression for a brand with zero U.S. equity — and turn awareness into consideration.</p>
+          <div class="case-study-results">
+            <p class="case-study-results-label">Key Contributions</p>
+            <ul>
+              <li>Developed experiential strategy across U.S. auto shows and consumer-facing launch events</li>
+              <li>Created brand education programming for dealer network nationwide</li>
+              <li>Built integrated sponsorship and media activation frameworks to extend launch reach</li>
+              <li>Contributed to early U.S. brand positioning that helped Genesis establish a distinct luxury identity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 2: Tiny Traveler -->
+      <div class="case-study fade-up">
+        <div class="case-study-meta">
+          <span class="case-study-tag">Brand Development</span>
+          <h3 class="case-study-title">Tiny Traveler</h3>
+          <p class="case-study-subtitle">Building a family travel brand from scratch</p>
+        </div>
+        <div class="case-study-body">
+          <p>Tiny Traveler is a family travel content brand I founded and built independently — creating everything from brand identity and editorial strategy to audience development and monetization. What started as a personal project became a real business: a community of parents who travel with intention, and a platform that brands trusted to reach them.</p>
+          <p>This project gave me hands-on experience across every dimension of brand building — strategy, content, social, partnerships, and revenue. It also deepened my understanding of what it actually takes to grow an audience from zero and convert it into a sustainable business.</p>
+          <div class="case-study-results">
+            <p class="case-study-results-label">Key Results</p>
+            <ul>
+              <li>Built brand identity, voice, and visual system from scratch</li>
+              <li>Grew engaged social community across Instagram and Pinterest</li>
+              <li>Secured paid partnerships with travel and family lifestyle brands</li>
+              <li>Developed content strategy that drove consistent organic reach and engagement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3: FG|PG Pandemic Pivot -->
+      <div class="case-study fade-up">
+        <div class="case-study-meta">
+          <span class="case-study-tag">Revenue Growth</span>
+          <h3 class="case-study-title">FG|PG Pandemic Pivot</h3>
+          <p class="case-study-subtitle">Turning crisis into $20M+ in new revenue</p>
+        </div>
+        <div class="case-study-body">
+          <p>When the pandemic hit in 2020, live events — the core revenue driver for FG|PG — stopped overnight. As a senior leader, I helped architect the agency's pivot: identifying adjacent opportunities, repositioning our capabilities, and moving fast to replace lost revenue with new business in digital, virtual, and content-driven activations.</p>
+          <p>The result wasn't just survival — it was growth. We emerged from the pandemic with a more diversified service offering, new client relationships, and a stronger case for the agency's strategic value beyond event production.</p>
+          <div class="case-study-results">
+            <p class="case-study-results-label">Key Results</p>
+            <ul>
+              <li>Led strategic response that generated $20M+ in net-new revenue during pandemic years</li>
+              <li>Developed and sold virtual and hybrid event capabilities to existing and new clients</li>
+              <li>Expanded agency positioning into digital content and brand strategy services</li>
+              <li>Retained key client relationships through crisis by delivering high-value alternative programs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 4: Hyundai Global Experiential -->
+      <div class="case-study fade-up">
+        <div class="case-study-meta">
+          <span class="case-study-tag">Global Programs</span>
+          <h3 class="case-study-title">Hyundai Global Experiential Program</h3>
+          <p class="case-study-subtitle">Scaling brand experiences across international markets</p>
+        </div>
+        <div class="case-study-body">
+          <p>Over several years of work with Hyundai Motor Company, I helped develop and scale experiential programming across global markets — from major auto shows in North America and Europe to brand activations tied to high-profile sponsorships including FIFA and the Olympics. The work required coordinating across international teams, managing complex logistics, and ensuring brand consistency across vastly different cultural and competitive contexts.</p>
+          <p>At its best, this work helped Hyundai show up as more than a brand with a point of view on mobility, design, and the future. My role was to bring that to life in physical and live environments in a way that was locally relevant and globally coherent.</p>
+          <div class="case-study-results">
+            <p class="case-study-results-label">Key Results</p>
+            <ul>
+              <li>Managed experiential activations across North America, Europe, and international auto shows</li>
+              <li>Developed integrated brand experiences tied to FIFA World Cup and Olympic sponsorships</li>
+              <li>Built scalable frameworks for global event execution with regional customization</li>
+              <li>Contributed to brand perception shifts tracked through post-event research and media metrics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
