@@ -173,16 +173,24 @@
 
     /* ===== HERO ===== */
     #hero {
+      position: relative;
       min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       padding-top: var(--nav-height);
+      overflow: hidden;
+    }
+    .hero-container {
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
     }
     .hero-content {
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px 60px 80px max(40px, calc((100vw - 1200px) / 2 + 40px));
+      padding: 80px 60px 80px 0;
     }
     .hero-eyebrow {
       display: flex;
@@ -245,8 +253,12 @@
       margin-top: 6px;
     }
     .hero-visual {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
       background: var(--off-white);
-      position: relative;
       overflow: hidden;
     }
     .hero-image-placeholder {
@@ -1147,9 +1159,8 @@
 
     @media (max-width: 768px) {
       .container { padding: 0 20px; }
-      #hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
-      .hero-content { padding: 60px 20px 80px; max-width: 100%; margin: 0; }
+      .hero-content { width: 100%; padding: 60px 0 80px; }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-image { max-height: 380px; }
       .services-header { grid-template-columns: 1fr; }
@@ -1216,7 +1227,8 @@
 
   <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="hero-content">
+    <div class="container hero-container">
+      <div class="hero-content">
       <div class="hero-eyebrow">
         <p>Brand, Marketing &amp; Experiential Leader</p>
       </div>
@@ -1246,6 +1258,7 @@
           <div class="hero-stat-num">550%</div>
           <div class="hero-stat-label">DTC Revenue Growth</div>
         </div>
+      </div>
       </div>
     </div>
     <div class="hero-visual">
