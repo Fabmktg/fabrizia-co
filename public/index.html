@@ -49,7 +49,7 @@
     p { font-size: 1rem; color: var(--navy-soft); line-height: 1.8; }
 
     /* ===== UTILITIES ===== */
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
     .section-label {
       display: inline-block;
       font-family: 'Inter', sans-serif;
@@ -182,8 +182,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px 60px 80px 40px;
-      max-width: 640px;
+      padding: 80px 60px 80px max(40px, calc((100vw - 1200px) / 2 + 40px));
     }
     .hero-eyebrow {
       display: flex;
@@ -785,9 +784,10 @@
     }
     .result-card {
       background: var(--white);
-      padding: 48px 40px;
+      padding: 32px;
       border: 1px solid var(--light-border);
       transition: border-color 0.3s;
+      text-align: left;
     }
     .result-card:hover { border-color: var(--accent); }
     .result-num {
@@ -1146,10 +1146,10 @@
     }
 
     @media (max-width: 768px) {
-      .container { padding: 0 24px; }
+      .container { padding: 0 20px; }
       #hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
-      .hero-content { padding: 60px 0 80px; max-width: 100%; margin: 0; }
+      .hero-content { padding: 60px 20px 80px; max-width: 100%; margin: 0; }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-image { max-height: 380px; }
       .services-header { grid-template-columns: 1fr; }
@@ -1216,7 +1216,7 @@
 
   <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="hero-content container" style="padding-left: max(40px, calc((100vw - 1160px)/2 + 40px));">
+    <div class="hero-content">
       <div class="hero-eyebrow">
         <p>Brand, Marketing &amp; Experiential Leader</p>
       </div>
