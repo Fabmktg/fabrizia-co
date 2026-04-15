@@ -872,6 +872,20 @@
       background: var(--off-white);
       border-left: 3px solid var(--accent);
     }
+    .case-study-videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .case-study-videos video {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--light-border);
+    }
+    @media (max-width: 768px) {
+      .case-study-videos { grid-template-columns: 1fr; }
+    }
     .case-study-results-label {
       font-size: 0.68rem;
       font-weight: 600;
@@ -1604,6 +1618,14 @@
               <li>Built integrated sponsorship and media activation frameworks to extend launch reach</li>
               <li>Contributed to early U.S. brand positioning that helped Genesis establish a distinct luxury identity</li>
             </ul>
+          </div>
+          <div class="case-study-videos">
+            <video controls preload="none" poster="">
+              <source src="/videos/Genesis NY Launch Vid 1.mp4" type="video/mp4">
+            </video>
+            <video controls preload="none" poster="">
+              <source src="/videos/Genesis Product Launch Vid2.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
